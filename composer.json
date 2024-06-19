@@ -1,0 +1,20 @@
+{
+    "name": "swissup/module-google-oauth2",
+    "description": "Magento 2 module to provide OAuth 2.0 support for Google API Services",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "require": {
+        "php": "^7.4|^8.0|^8.1|^8.2|^8.3",
+        "magento/framework": "^102.0|^103.0",
+        "swissup/module-core": "^1.12.19",
+        "league/oauth2-google": "^4.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Swissup\\GoogleOAuth\\": ""
+        }
+    }
+}
