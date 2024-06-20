@@ -1,6 +1,6 @@
 {
-    "name": "swissup/module-google-oauth2",
-    "description": "Magento 2 module to provide OAuth 2.0 support for Google API Services",
+    "name": "swissup/module-oauth2-client",
+    "description": "Magento 2 module to provide OAuth 2.0 supports",
     "type": "magento2-module",
     "version": "1.0.0",
     "require": {
@@ -14,7 +14,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Swissup\\GoogleOAuth\\": ""
+            "Swissup\\OAuth2Client\\": ""
         }
     }
 }

@@ -1,0 +1,11 @@
+{
+    "swissup_oauth_access_token": {
+        "column": {
+            "id": true,
+            "token": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

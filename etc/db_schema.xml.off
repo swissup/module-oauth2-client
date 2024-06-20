@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+  <table name="swissup_oauth_access_token" resource="default" engine="innodb" comment="swissup_email_service">
+    <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true" comment="Id"/>
+<!--    <column xsi:type="varchar" name="client_id" nullable="false" length="255" default="" comment="Client Id"/>-->
+<!--    <column xsi:type="varchar" name="client_secret" nullable="false" length="255" default="" comment="Client Secret"/>-->
+<!--    <column xsi:type="int" name="type" padding="10" unsigned="true" nullable="false" identity="false" comment="Item Id" disabled="true" default="0"/>-->
+    <column xsi:type="varchar" name="access_token" nullable="false" length="255" default="" comment="Access Token"/>
+    <column xsi:type="varchar" name="refresh_token" nullable="false" length="255" default="" comment="Refresh Token"/>
+    <column xsi:type="datetime" name="expires" on_update="false" nullable="true" comment="Expires Time"/>
+    <column xsi:type="varchar" name="resource_owner_id" nullable="false" length="255" default="" comment="resource_owner_id"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+      <column name="id"/>
+    </constraint>
+  </table>
+</schema>
