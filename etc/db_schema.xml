@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+  <table name="swissup_oauth_client_access_token" resource="default" engine="innodb" comment="swissup_oauth_client_access_token">
+    <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true" comment="Id"/>
+    <column xsi:type="int" name="provider" padding="10" unsigned="true" nullable="false" identity="false" comment="Provider Id" disabled="true" default="0"/>
+    <column xsi:type="varchar" name="credential_hash" nullable="false" length="128" default="" comment="Hash"/>
+    <column xsi:type="text" name="access_token" nullable="false" comment="Access Token"/>
+    <column xsi:type="text" name="refresh_token" nullable="false" comment="Refresh Token"/>
+    <column xsi:type="datetime" name="expires" on_update="false" nullable="true" comment="Expires Time"/>
+    <column xsi:type="text" name="resource_owner_id" nullable="false" comment="resource_owner_id"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+      <column name="id"/>
+    </constraint>
+  </table>
+</schema>

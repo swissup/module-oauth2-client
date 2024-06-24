@@ -1,4 +1,4 @@
-# module-google-oauth2
+# module-oauth2-client
 Magento 2 module to provide OAuth 2.0 supports.
 The module's main purpose was to reuse the same code and credentials in other modules.
 

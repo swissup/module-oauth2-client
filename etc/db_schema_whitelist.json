@@ -1,8 +1,13 @@
 {
-    "swissup_oauth_access_token": {
+    "swissup_oauth_client_access_token": {
         "column": {
             "id": true,
-            "token": true
+            "provider": true,
+            "credential_hash": true,
+            "access_token": true,
+            "refresh_token": true,
+            "expires": true,
+            "resource_owner_id": true
         },
         "constraint": {
             "PRIMARY": true

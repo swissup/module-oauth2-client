@@ -4,7 +4,7 @@ namespace Swissup\OAuth2Client\Model\Data;
 
 use Magento\Framework\Encryption\Helper\Security;
 
-class FlowToken implements Swissup\OAuth2Client\Api\FlowTokenInterface
+class FlowToken implements \Swissup\OAuth2Client\Api\FlowTokenInterface
 {
     const CACHE_ID = 'swissup_oauth2_client_flow_1h_token';
     const CACHE_TAG = 'swissup_oauth2_client';
