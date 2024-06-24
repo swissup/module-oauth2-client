@@ -10,7 +10,7 @@ class Protector implements ProtectorInterface
     /**
      * @var EncryptorInterface
      */
-    private $encryptor;
+    private EncryptorInterface $encryptor;
 
     private $protectedColumnNames = [];
 
