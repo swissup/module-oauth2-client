@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Swissup\OAuth2Client\Api\EncryptorInterface" type="Swissup\OAuth2Client\Model\Data\Encryptor" />
-    <preference for="Swissup\OAuth2Client\Api\FlowTokenInterface" type="Swissup\OAuth2Client\Model\Data\FlowToken" />
+    <preference for="Swissup\OAuth2Client\Api\BearerTokenInterface" type="Swissup\OAuth2Client\Model\Data\BearerToken" />
     <preference for="Swissup\OAuth2Client\Api\ProtectorInterface" type="Swissup\OAuth2Client\Model\Data\Protector" />
     <preference for="Swissup\OAuth2Client\Api\Data\AccessTokenInterface" type="Swissup\OAuth2Client\Model\AccessToken" />
     <preference for="Swissup\OAuth2Client\Api\Data\CredentialInterface" type="Swissup\OAuth2Client\Model\Credential" />
