@@ -1,0 +1,7 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="swissup_oauth2client" frontName="swissup_oauth2client">
+            <module name="Swissup_OAuth2Client"/>
+        </route>
+    </router>
+</config>
