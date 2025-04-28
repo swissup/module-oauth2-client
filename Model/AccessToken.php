@@ -33,8 +33,8 @@ class AccessToken extends AbstractModel implements AccessTokenInterface
         \Magento\Framework\Url\EncoderInterface $urlEncoder,
         \Swissup\OAuth2Client\Model\Data\BearerToken $bearerToken,
         \Swissup\OAuth2Client\Model\CredentialFactory $credentialFactory,
-        \Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
-        \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
+        ?\Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
+        ?\Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
         array $data = []
     ) {
         parent::__construct($context, $registry, $resource, $resourceCollection, $data);
