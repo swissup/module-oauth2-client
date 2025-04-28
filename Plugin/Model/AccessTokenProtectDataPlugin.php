@@ -14,7 +14,7 @@ class AccessTokenProtectDataPlugin
     private ProtectorInterface $protector;
 
     /**
-     * @param \Swissup\Email\Api\ServiceEncryptorInterface $serviceEncryptor
+     * @param ProtectorInterface $protector
      */
     public function __construct(ProtectorInterface $protector)
     {

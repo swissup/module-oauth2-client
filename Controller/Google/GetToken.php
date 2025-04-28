@@ -154,7 +154,6 @@ class GetToken extends \Magento\Framework\App\Action\Action
                 return $resultRedirect;
             }
             $this->resetFlowState();
-
             $tokenOptions = array_merge($token->jsonSerialize(), ['refresh_token' => $refreshToken]);
             $accessToken->addData($tokenOptions);
             $this->accessTokenRepository->save($accessToken);

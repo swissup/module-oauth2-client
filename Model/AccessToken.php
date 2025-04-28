@@ -146,7 +146,7 @@ class AccessToken extends AbstractModel implements AccessTokenInterface
     }
 
     /**
-     * @see ServiceOAuth2TokenPlugin::afterAfterLoad
+     * @see EmailStorageOAuth2TokenPlugin::afterAfterLoad
      * @return Credential
      */
     public function getCredential()
