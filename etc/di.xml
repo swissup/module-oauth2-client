@@ -5,6 +5,7 @@
     <preference for="Swissup\OAuth2Client\Api\ProtectorInterface" type="Swissup\OAuth2Client\Model\Data\Protector" />
     <preference for="Swissup\OAuth2Client\Api\Data\AccessTokenInterface" type="Swissup\OAuth2Client\Model\AccessToken" />
     <preference for="Swissup\OAuth2Client\Api\Data\CredentialInterface" type="Swissup\OAuth2Client\Model\Credential" />
+    <preference for="Swissup\OAuth2Client\Api\AccessTokenRepositoryInterface" type="Swissup\OAuth2Client\Model\AccessTokenRepository" />
 
     <type name="Swissup\OAuth2Client\Model\AccessToken">
         <plugin name="ProtectDataPlugin" type="Swissup\OAuth2Client\Plugin\Model\AccessTokenProtectDataPlugin" sortOrder="10"/>
