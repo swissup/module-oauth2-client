@@ -10,4 +10,14 @@
     <type name="Swissup\OAuth2Client\Model\AccessToken">
         <plugin name="ProtectDataPlugin" type="Swissup\OAuth2Client\Plugin\Model\AccessTokenProtectDataPlugin" sortOrder="10"/>
     </type>
+
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="oauth2_validate_credentials" xsi:type="object">
+                    Swissup\OAuth2Client\Console\Command\ValidateOAuth2CredentialsCommand
+                </item>
+            </argument>
+        </arguments>
+    </type>
 </config>
