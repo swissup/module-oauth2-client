@@ -186,14 +186,18 @@ class AccessToken extends AbstractModel implements AccessTokenInterface
         $tokenOptions = $this->toArray([
             self::ACCESS_TOKEN,
             self::REFRESH_TOKEN,
-            self::EXPIRES,
             self::RESOURCE_OWNER_ID,
         ]);
         if (empty($tokenOptions[self::ACCESS_TOKEN])) {
             return $this;
         }
+        $expiresValue = $this->getData(self::EXPIRES);
+        $tokenOptions[self::EXPIRES] = is_numeric($expiresValue) ?
+            (int) $expiresValue : $this->getTimestamp($expiresValue);
+
         $storedAccessToken = new \League\OAuth2\Client\Token\AccessToken($tokenOptions);
         $refreshToken = $storedAccessToken->getRefreshToken();
+
         if (!$storedAccessToken->hasExpired() || empty($refreshToken)) {
             return $this;
         }
@@ -203,6 +207,24 @@ class AccessToken extends AbstractModel implements AccessTokenInterface
             'refresh_token' => $refreshToken
         ]);
         $tokenOptions = array_merge($refreshedAccessToken->jsonSerialize(), ['refresh_token' => $refreshToken]);
-        return $this->addData($tokenOptions);
+        $this->addData($tokenOptions);
+
+        return $this;
+    }
+
+    /**
+     * @param string $dateString
+     * @return int
+     * @throws RuntimeException
+     */
+    private function getTimestamp(string $dateString): int
+    {
+        try {
+            $timezone = new \DateTimeZone('UTC');
+            $datetime = new \DateTime($dateString, $timezone);
+            return $datetime->getTimestamp();
+        } catch (\Exception $e) {
+            throw new RuntimeException('Failed to get timestamp: ' . $e->getMessage());
+        }
     }
 }
