@@ -60,7 +60,7 @@ class ValidateOAuth2CredentialsCommand extends Command
      * @param OutputInterface $output
      * @return int
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         try {
             $provider = $input->getOption(self::PROVIDER_OPTION);
